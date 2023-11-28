@@ -9,21 +9,32 @@
 /* Begin PBXBuildFile section */
 		F18F7BC72B15AA4700F4228B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F7BC62B15AA4700F4228B /* AppDelegate.swift */; };
 		F18F7BC92B15AA4700F4228B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F7BC82B15AA4700F4228B /* SceneDelegate.swift */; };
-		F18F7BCB2B15AA4700F4228B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F7BCA2B15AA4700F4228B /* ViewController.swift */; };
+		F18F7BCB2B15AA4700F4228B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F7BCA2B15AA4700F4228B /* WeatherViewController.swift */; };
 		F18F7BCE2B15AA4700F4228B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F18F7BCC2B15AA4700F4228B /* Main.storyboard */; };
 		F18F7BD02B15AA4800F4228B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F18F7BCF2B15AA4800F4228B /* Assets.xcassets */; };
 		F18F7BD32B15AA4800F4228B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F18F7BD12B15AA4800F4228B /* LaunchScreen.storyboard */; };
+		F18F7BE42B16395000F4228B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F7BE32B16395000F4228B /* LocationManager.swift */; };
+		F18F7BE62B16396D00F4228B /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F7BE52B16396D00F4228B /* IAPManager.swift */; };
+		F18F7BE82B16399900F4228B /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F7BE72B16399900F4228B /* WeatherManager.swift */; };
+		F18F7BEA2B163C7E00F4228B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F7BE92B163C7E00F4228B /* SettingsViewController.swift */; };
+		F18F7BEE2B163D4E00F4228B /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F7BED2B163D4E00F4228B /* TabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F18F7BC32B15AA4700F4228B /* brightsky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brightsky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F18F7BC62B15AA4700F4228B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F18F7BC82B15AA4700F4228B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F18F7BCA2B15AA4700F4228B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F18F7BCA2B15AA4700F4228B /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		F18F7BCD2B15AA4700F4228B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F18F7BCF2B15AA4800F4228B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F18F7BD22B15AA4800F4228B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F18F7BD42B15AA4800F4228B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F18F7BDA2B15B52700F4228B /* brightsky.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = brightsky.entitlements; sourceTree = "<group>"; };
+		F18F7BE32B16395000F4228B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F18F7BE52B16396D00F4228B /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
+		F18F7BE72B16399900F4228B /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		F18F7BE92B163C7E00F4228B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F18F7BED2B163D4E00F4228B /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +67,69 @@
 		F18F7BC52B15AA4700F4228B /* brightsky */ = {
 			isa = PBXGroup;
 			children = (
-				F18F7BC62B15AA4700F4228B /* AppDelegate.swift */,
-				F18F7BC82B15AA4700F4228B /* SceneDelegate.swift */,
-				F18F7BCA2B15AA4700F4228B /* ViewController.swift */,
+				F18F7BE22B16391800F4228B /* Managers */,
+				F18F7BE12B1638A800F4228B /* Other */,
+				F18F7BE02B16389E00F4228B /* Controllers */,
+				F18F7BDF2B16389500F4228B /* Models */,
+				F18F7BDE2B16388D00F4228B /* ViewModels */,
+				F18F7BDD2B16387F00F4228B /* Views */,
+				F18F7BDA2B15B52700F4228B /* brightsky.entitlements */,
 				F18F7BCC2B15AA4700F4228B /* Main.storyboard */,
-				F18F7BCF2B15AA4800F4228B /* Assets.xcassets */,
-				F18F7BD12B15AA4800F4228B /* LaunchScreen.storyboard */,
 				F18F7BD42B15AA4800F4228B /* Info.plist */,
 			);
 			path = brightsky;
+			sourceTree = "<group>";
+		};
+		F18F7BDD2B16387F00F4228B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F18F7BDE2B16388D00F4228B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F18F7BDF2B16389500F4228B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F18F7BE02B16389E00F4228B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F18F7BCA2B15AA4700F4228B /* WeatherViewController.swift */,
+				F18F7BE92B163C7E00F4228B /* SettingsViewController.swift */,
+				F18F7BED2B163D4E00F4228B /* TabViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F18F7BE12B1638A800F4228B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				F18F7BD12B15AA4800F4228B /* LaunchScreen.storyboard */,
+				F18F7BCF2B15AA4800F4228B /* Assets.xcassets */,
+				F18F7BC62B15AA4700F4228B /* AppDelegate.swift */,
+				F18F7BC82B15AA4700F4228B /* SceneDelegate.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F18F7BE22B16391800F4228B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F18F7BE32B16395000F4228B /* LocationManager.swift */,
+				F18F7BE52B16396D00F4228B /* IAPManager.swift */,
+				F18F7BE72B16399900F4228B /* WeatherManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +203,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F18F7BCB2B15AA4700F4228B /* ViewController.swift in Sources */,
+				F18F7BEE2B163D4E00F4228B /* TabViewController.swift in Sources */,
+				F18F7BE82B16399900F4228B /* WeatherManager.swift in Sources */,
+				F18F7BE42B16395000F4228B /* LocationManager.swift in Sources */,
+				F18F7BEA2B163C7E00F4228B /* SettingsViewController.swift in Sources */,
+				F18F7BE62B16396D00F4228B /* IAPManager.swift in Sources */,
+				F18F7BCB2B15AA4700F4228B /* WeatherViewController.swift in Sources */,
 				F18F7BC72B15AA4700F4228B /* AppDelegate.swift in Sources */,
 				F18F7BC92B15AA4700F4228B /* SceneDelegate.swift in Sources */,
 			);
@@ -290,6 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = brightsky/brightsky.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -317,6 +388,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = brightsky/brightsky.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
