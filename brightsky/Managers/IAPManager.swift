@@ -11,7 +11,5 @@ import Foundation
 final class IAPManager {
     static let shared = IAPManager()
     
-    private override init() {
-         
-    }
+//    private override init() {}
 }
