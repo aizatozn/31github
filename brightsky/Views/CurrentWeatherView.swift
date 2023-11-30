@@ -18,5 +18,4 @@ final class CurrentWeatherView: UIView {
     required init?(coder: NSCoder) {
         fatalError()
     }
-
 }
