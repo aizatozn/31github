@@ -11,7 +11,7 @@ final class CurrentWeatherView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .orange
+        backgroundColor = .systemBackground
         translatesAutoresizingMaskIntoConstraints = false
     }
     

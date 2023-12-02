@@ -20,6 +20,7 @@
 		F18F7BEE2B163D4E00F4228B /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F7BED2B163D4E00F4228B /* TabViewController.swift */; };
 		F1A153382B172B2C002E602B /* CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A153372B172B2C002E602B /* CurrentWeatherView.swift */; };
 		F1A1533A2B17A095002E602B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A153392B17A095002E602B /* SettingsView.swift */; };
+		F1A1533D2B1B40C8002E602B /* SettingsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1533C2B1B40C8002E602B /* SettingsViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		F18F7BED2B163D4E00F4228B /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		F1A153372B172B2C002E602B /* CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherView.swift; sourceTree = "<group>"; };
 		F1A153392B17A095002E602B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F1A1533C2B1B40C8002E602B /* SettingsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		F18F7BDE2B16388D00F4228B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F1A1533C2B1B40C8002E602B /* SettingsViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				F1A153382B172B2C002E602B /* CurrentWeatherView.swift in Sources */,
 				F18F7BEA2B163C7E00F4228B /* SettingsViewController.swift in Sources */,
 				F1A1533A2B17A095002E602B /* SettingsView.swift in Sources */,
+				F1A1533D2B1B40C8002E602B /* SettingsViewViewModel.swift in Sources */,
 				F18F7BE62B16396D00F4228B /* IAPManager.swift in Sources */,
 				F18F7BCB2B15AA4700F4228B /* WeatherViewController.swift in Sources */,
 				F18F7BC72B15AA4700F4228B /* AppDelegate.swift in Sources */,
