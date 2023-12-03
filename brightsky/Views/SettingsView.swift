@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol SettingsViewDelegatr: AnyObject {
+protocol SettingsViewDelegate: AnyObject {
     func settingsView(_ settingsView: SettingsView, didTab option: SettingOption)
 }
 
 final class SettingsView: UIView, UITableViewDelegate, UITableViewDataSource {
     
-    weak var delegate: SettingsViewDelegatr?
+    weak var delegate: SettingsViewDelegate?
     
     private var viewModel: SettingsViewViewModel? {
         didSet {
