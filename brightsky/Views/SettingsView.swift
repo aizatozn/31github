@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol SettingsViewDelegatr: AnyObject {
+    func settingsView(_ settingsView: SettingsView, didTab option: SettingOption)
+}
+
 final class SettingsView: UIView, UITableViewDelegate, UITableViewDataSource {
+    
+    weak var delegate: SettingsViewDelegatr?
     
     private var viewModel: SettingsViewViewModel? {
         didSet {
@@ -60,6 +66,10 @@ final class SettingsView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let viewModel else { return }
+        let option = viewModel.options[indexPath.row]
+        // Handle tap
+        delegate?.settingsView(self, didTab: option)
     }
-    
 }
