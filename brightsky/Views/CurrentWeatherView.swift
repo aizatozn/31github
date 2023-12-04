@@ -18,4 +18,8 @@ final class CurrentWeatherView: UIView {
     required init?(coder: NSCoder) {
         fatalError()
     }
+    
+    public func reload() {
+        
+    }
 }
