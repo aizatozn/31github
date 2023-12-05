@@ -26,6 +26,7 @@ class WeatherViewController: UIViewController {
             }
         }
     }
+    
     private func setUpView() {
         view.backgroundColor = .systemBackground
         
