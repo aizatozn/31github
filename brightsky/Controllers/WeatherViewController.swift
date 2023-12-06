@@ -38,6 +38,19 @@ class WeatherViewController: UIViewController {
             primaryView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
+    
+    private func setUpView() {
+        view.backgroundColor = .systemBackground
+        
+        view.addSubview(primaryView)
+        NSLayoutConstraint.activate([
+            primaryView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            primaryView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            primaryView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            primaryView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+    }
+
 }
 
 
