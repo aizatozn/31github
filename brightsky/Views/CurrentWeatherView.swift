@@ -8,11 +8,15 @@
 import UIKit
 
 final class CurrentWeatherView: UIView {
+    
+    private let collectionView: UICollectionView?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .systemBackground
         translatesAutoresizingMaskIntoConstraints = false
+        
+        createCollectionView()
     }
     
     required init?(coder: NSCoder) {
@@ -20,6 +24,19 @@ final class CurrentWeatherView: UIView {
     }
     
     public func reload() {
+        
+    }
+    
+    private func createCollectionView() {
+        let layout = UICollectionViewCompositionalLayout { sectionIndex, _ in
+            return self.layout(for: sectionIndex)
+        }
+        let collectionView = UICollectionView(frame: .zero, collectionViewlayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        self.collectionView = collectionView
+    }
+    
+    private func layout(for: section: Int) -> NSCollectionLayoutSection {
         
     }
 }

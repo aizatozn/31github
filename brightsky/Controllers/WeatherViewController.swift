@@ -19,7 +19,7 @@ class WeatherViewController: UIViewController {
     
     private func getLocation() {
         LocationManager.shared.getCurrentLocation { location in
-            WeatherManager.shared.getWeather(for: location) {
+            WeatherManager.shared.getWeather(for: location) { [weak self] in
                 DispatchQueue.main.async {
                     self?.primaryView.reload()
                 }
