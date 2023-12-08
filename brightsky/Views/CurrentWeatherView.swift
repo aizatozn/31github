@@ -9,11 +9,10 @@ import UIKit
 
 final class CurrentWeatherView: UIView {
     
-    private let collectionView: UICollectionView?
+    private var collectionView: UICollectionView?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .systemBackground
         translatesAutoresizingMaskIntoConstraints = false
         
         createCollectionView()
@@ -31,12 +30,28 @@ final class CurrentWeatherView: UIView {
         let layout = UICollectionViewCompositionalLayout { sectionIndex, _ in
             return self.layout(for: sectionIndex)
         }
-        let collectionView = UICollectionView(frame: .zero, collectionViewlayout: layout)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.dataSource = self
+        collectionView.register(CurrentWeatherCollectionViewCell.self,
+                                forCellWithReuseIdentifier: CurrentWeatherCollectionViewCell.cellIdentifier)
+        collectionView.register(DailyWeatherCollectionViewCell.self,
+                                forCellWithReuseIdentifier: DailyWeatherCollectionViewCell.cellIdentifier)
+        collectionView.register(HourlyWeatherCollectionViewCell.self,
+                                forCellWithReuseIdentifier: HourlyWeatherCollectionViewCell.cellIdentifier)
+        addSubview(collectionView)
+        
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: topAnchor),
+            collectionView.leftAnchor.constraint(equalTo: leftAnchor),
+            collectionView.rightAnchor.constraint(equalTo: rightAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
+        ])
+        
         self.collectionView = collectionView
     }
     
-    private func layout(for: sectionIndex: Int) -> NSCollectionLayoutSection {
+    private func layout(for sectionIndex: Int) -> NSCollectionLayoutSection {
         let section = CurrentWeatherSection.allCases[sectionIndex]
         
         switch section {
@@ -76,7 +91,44 @@ final class CurrentWeatherView: UIView {
             )
             
             return NSCollectionLayoutSection(group: group)
+        }
+    }
+}
 
+extension CurrentWeatherView: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.row == 0 {
+            guard let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: CurrentWeatherCollectionViewCell.cellIdentifier,
+                for: indexPath
+            ) as? CurrentWeatherCollectionViewCell else {
+                fatalError()
+            }
+            return cell
+        } else if indexPath.row == 1 {
+            guard let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: DailyWeatherCollectionViewCell.cellIdentifier,
+                for: indexPath
+            ) as? DailyWeatherCollectionViewCell else {
+                fatalError()
+            }
+            return cell
+        } else {
+            guard let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: HourlyWeatherCollectionViewCell.cellIdentifier,
+                for: indexPath
+            ) as? HourlyWeatherCollectionViewCell else {
+                fatalError()
+            }
+            return cell
         }
     }
 }

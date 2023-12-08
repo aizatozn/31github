@@ -22,6 +22,9 @@
 		F1A1533A2B17A095002E602B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A153392B17A095002E602B /* SettingsView.swift */; };
 		F1A1533D2B1B40C8002E602B /* SettingsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1533C2B1B40C8002E602B /* SettingsViewViewModel.swift */; };
 		F1D6479B2B2209F900DE0482 /* CurrentWeatherSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6479A2B2209F900DE0482 /* CurrentWeatherSection.swift */; };
+		F1D6479E2B22C86A00DE0482 /* CurrentWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6479D2B22C86A00DE0482 /* CurrentWeatherCollectionViewCell.swift */; };
+		F1D647A02B22C93400DE0482 /* DailyWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6479F2B22C93400DE0482 /* DailyWeatherCollectionViewCell.swift */; };
+		F1D647A22B22C95800DE0482 /* HourlyWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D647A12B22C95800DE0482 /* HourlyWeatherCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		F1A153392B17A095002E602B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F1A1533C2B1B40C8002E602B /* SettingsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewViewModel.swift; sourceTree = "<group>"; };
 		F1D6479A2B2209F900DE0482 /* CurrentWeatherSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherSection.swift; sourceTree = "<group>"; };
+		F1D6479D2B22C86A00DE0482 /* CurrentWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
+		F1D6479F2B22C93400DE0482 /* DailyWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
+		F1D647A12B22C95800DE0482 /* HourlyWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,7 @@
 		F18F7BDD2B16387F00F4228B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F1D6479C2B22C82B00DE0482 /* WeatherCells */,
 				F1A153372B172B2C002E602B /* CurrentWeatherView.swift */,
 				F1A153392B17A095002E602B /* SettingsView.swift */,
 			);
@@ -142,6 +149,16 @@
 				F18F7BE72B16399900F4228B /* WeatherManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		F1D6479C2B22C82B00DE0482 /* WeatherCells */ = {
+			isa = PBXGroup;
+			children = (
+				F1D6479D2B22C86A00DE0482 /* CurrentWeatherCollectionViewCell.swift */,
+				F1D6479F2B22C93400DE0482 /* DailyWeatherCollectionViewCell.swift */,
+				F1D647A12B22C95800DE0482 /* HourlyWeatherCollectionViewCell.swift */,
+			);
+			path = WeatherCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,11 +239,14 @@
 				F18F7BEA2B163C7E00F4228B /* SettingsViewController.swift in Sources */,
 				F1A1533A2B17A095002E602B /* SettingsView.swift in Sources */,
 				F1A1533D2B1B40C8002E602B /* SettingsViewViewModel.swift in Sources */,
+				F1D647A02B22C93400DE0482 /* DailyWeatherCollectionViewCell.swift in Sources */,
 				F18F7BE62B16396D00F4228B /* IAPManager.swift in Sources */,
 				F18F7BCB2B15AA4700F4228B /* WeatherViewController.swift in Sources */,
 				F18F7BC72B15AA4700F4228B /* AppDelegate.swift in Sources */,
 				F1D6479B2B2209F900DE0482 /* CurrentWeatherSection.swift in Sources */,
+				F1D647A22B22C95800DE0482 /* HourlyWeatherCollectionViewCell.swift in Sources */,
 				F18F7BC92B15AA4700F4228B /* SceneDelegate.swift in Sources */,
+				F1D6479E2B22C86A00DE0482 /* CurrentWeatherCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
