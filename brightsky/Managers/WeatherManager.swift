@@ -16,7 +16,7 @@ final class WeatherManager {
     
     public private(set) var currentWeather: CurrentWeather?
     public private(set) var hourlyWeather: [HourWeather] = []
-    public private(set) var dailyWeaather: [DayWeather] = []
+    public private(set) var dailyWeather: [DayWeather] = []
 
     private init() {}
     
@@ -30,7 +30,7 @@ final class WeatherManager {
                 print("Daily: \(result.dailyForecast)")
                 
                 self.currentWeather = result.currentWeather
-                self.dailyWeaather = result.dailyForecast.forecast
+                self.dailyWeather = result.dailyForecast.forecast
                 self.hourlyWeather = result.hourlyForecast.forecast
                 
                 completion()

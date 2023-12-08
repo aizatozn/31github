@@ -25,7 +25,7 @@ class WeatherViewController: UIViewController {
                     self?.primaryView.configure(with: [
                         .current(viewModel: .init(model: currentWeather)),
                         .hourly(viewModels: WeatherManager.shared.hourlyWeather.compactMap({ .init(model: $0) })),
-                        .daily(viewModels: WeatherManager.shared.dailyWeaather.compactMap({ .init(model: $0) }))
+                        .daily(viewModels: WeatherManager.shared.dailyWeather.compactMap({ .init(model: $0) }))
                     ])
                 }
             }

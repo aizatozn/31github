@@ -133,21 +133,21 @@ extension CurrentWeatherView: UICollectionViewDataSource {
             cell.configure(with: viewModel)
             return cell
             
-        case .hourly(let viewModels):
-            guard let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: HourlyWeatherCollectionViewCell.cellIdentifier,
-                for: indexPath
-            ) as? HourlyWeatherCollectionViewCell else {
-                fatalError()
-            }
-            cell.configure(with: viewModels[indexPath.row])
-            return cell
-            
         case .daily(let viewModels):
             guard let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: DailyWeatherCollectionViewCell.cellIdentifier,
                 for: indexPath
             ) as? DailyWeatherCollectionViewCell else {
+                fatalError()
+            }
+            cell.configure(with: viewModels[indexPath.row])
+            return cell
+            
+        case .hourly(let viewModels):
+            guard let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: HourlyWeatherCollectionViewCell.cellIdentifier,
+                for: indexPath
+            ) as? HourlyWeatherCollectionViewCell else {
                 fatalError()
             }
             cell.configure(with: viewModels[indexPath.row])
