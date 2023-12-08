@@ -105,7 +105,7 @@ extension CurrentWeatherView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row == 0 {
+        if indexPath.section == 0 {
             guard let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: CurrentWeatherCollectionViewCell.cellIdentifier,
                 for: indexPath
@@ -113,7 +113,7 @@ extension CurrentWeatherView: UICollectionViewDataSource {
                 fatalError()
             }
             return cell
-        } else if indexPath.row == 1 {
+        } else if indexPath.section == 1 {
             guard let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: DailyWeatherCollectionViewCell.cellIdentifier,
                 for: indexPath
