@@ -21,6 +21,7 @@
 		F1A153382B172B2C002E602B /* CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A153372B172B2C002E602B /* CurrentWeatherView.swift */; };
 		F1A1533A2B17A095002E602B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A153392B17A095002E602B /* SettingsView.swift */; };
 		F1A1533D2B1B40C8002E602B /* SettingsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A1533C2B1B40C8002E602B /* SettingsViewViewModel.swift */; };
+		F1D6479B2B2209F900DE0482 /* CurrentWeatherSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6479A2B2209F900DE0482 /* CurrentWeatherSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		F1A153372B172B2C002E602B /* CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherView.swift; sourceTree = "<group>"; };
 		F1A153392B17A095002E602B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F1A1533C2B1B40C8002E602B /* SettingsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewViewModel.swift; sourceTree = "<group>"; };
+		F1D6479A2B2209F900DE0482 /* CurrentWeatherSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				F1A1533C2B1B40C8002E602B /* SettingsViewViewModel.swift */,
+				F1D6479A2B2209F900DE0482 /* CurrentWeatherSection.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				F18F7BE62B16396D00F4228B /* IAPManager.swift in Sources */,
 				F18F7BCB2B15AA4700F4228B /* WeatherViewController.swift in Sources */,
 				F18F7BC72B15AA4700F4228B /* AppDelegate.swift in Sources */,
+				F1D6479B2B2209F900DE0482 /* CurrentWeatherSection.swift in Sources */,
 				F18F7BC92B15AA4700F4228B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
