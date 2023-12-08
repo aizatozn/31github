@@ -19,4 +19,7 @@ class HourlyWeatherCollectionViewCell: UICollectionViewCell {
         fatalError()
     }
 
+    public func configure(with viewModel: HourlyWeatherCollectionViewCellViewModel) {
+        
+    }
 }

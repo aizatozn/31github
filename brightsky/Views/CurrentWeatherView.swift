@@ -130,6 +130,7 @@ extension CurrentWeatherView: UICollectionViewDataSource {
             ) as? CurrentWeatherCollectionViewCell else {
                 fatalError()
             }
+            cell.configure(with: viewModel)
             return cell
             
         case .hourly(let viewModels):
@@ -139,6 +140,7 @@ extension CurrentWeatherView: UICollectionViewDataSource {
             ) as? HourlyWeatherCollectionViewCell else {
                 fatalError()
             }
+            cell.configure(with: viewModels[indexPath.row])
             return cell
             
         case .daily(let viewModels):
@@ -148,6 +150,7 @@ extension CurrentWeatherView: UICollectionViewDataSource {
             ) as? DailyWeatherCollectionViewCell else {
                 fatalError()
             }
+            cell.configure(with: viewModels[indexPath.row])
             return cell
         }
     }
