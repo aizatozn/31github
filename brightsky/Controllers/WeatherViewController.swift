@@ -21,7 +21,11 @@ class WeatherViewController: UIViewController {
         LocationManager.shared.getCurrentLocation { location in
             WeatherManager.shared.getWeather(for: location) { [weak self] in
                 DispatchQueue.main.async {
-                    self?.primaryView.reload()
+                    self?.primaryView.configure(with: [
+                        .current(viewModel: .init()),
+                        .hourly(viewModels: [.init(), .init(), .init(), .init() ,.init() ,.init() ,.init() ,.init() ,.init()]),
+                        .daily(viewModels: [.init(), .init(), .init(), .init() ,.init() ,.init() ,.init() ,.init() ,.init()])
+                    ])
                 }
             }
         }
