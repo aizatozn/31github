@@ -33,7 +33,7 @@ final class WeatherManager {
                 self.dailyWeather = result.dailyForecast.forecast
                 self.hourlyWeather = result.hourlyForecast.forecast
                 
-                completion()
+                ()
             } catch {
                 print("\n\nError"+String(describing: error))
             }
