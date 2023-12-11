@@ -40,24 +40,3 @@ final class WeatherManager {
         }
     }
 }
-
-
-public func getWeather(for location: CLLocation, completion: @escaping () -> Void) {
-    Task {
-        do {
-            let result = try await service.weather(for: location)
-            
-            print("Current: \(result.currentWeather)")
-            print("Hourly: \(result.hourlyForecast)")
-            print("Daily: \(result.dailyForecast)")
-            
-            self.currentWeather = result.currentWeather
-            self.dailyWeather = result.dailyForecast.forecast
-            self.hourlyWeather = result.hourlyForecast.forecast
-            
-            ()
-        } catch {
-            print("\n\nError"+String(describing: error))
-        }
-    }
-}
