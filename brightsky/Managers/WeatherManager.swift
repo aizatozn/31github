@@ -40,7 +40,3 @@ final class WeatherManager {
         }
     }
 }
-
-} catch {
-    print("\n\nError"+String(describing: error))
-}
