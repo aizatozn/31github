@@ -44,15 +44,4 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
         manager.stopUpdatingLocation()
     }
     
-    
-    
-    
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else {
-            return
-        }
-        self.location = location
-        manager.stopUpdatingLocation()
-    }
 }
