@@ -39,4 +39,7 @@ final class WeatherManager {
             }
         }
     }
+    
+    
+    
 }
