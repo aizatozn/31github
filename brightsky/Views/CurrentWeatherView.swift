@@ -155,7 +155,4 @@ extension CurrentWeatherView: UICollectionViewDataSource {
         }
     }
     
-    
-    
-    
 }
