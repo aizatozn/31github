@@ -17,6 +17,7 @@ final class SettingsView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     private var viewModel: SettingsViewViewModel? {
         didSet {
+            print("- \(viewModel?.options.count)")
             tableView.reloadData()
         }
     }
