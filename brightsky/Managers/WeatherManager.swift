@@ -38,7 +38,5 @@ final class WeatherManager {
                 print("\n\nError"+String(describing: error))
             }
         }
-        
-        
     }
 }
