@@ -43,7 +43,4 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
         self.location = location
         manager.stopUpdatingLocation()
     }
-    
-    
-    
 }
