@@ -72,4 +72,15 @@ final class HomeViewController: UIViewController {
     @objc private func menuButtonTapped() {
         // Обработка нажатия кнопки меню
     }
+    
+    
+    
+    
+    @objc private func logoButtonTapped() {
+        // Обработка нажатия на логотип
+    }
+
+    @objc private func menuButtonTapped() {
+        // Обработка нажатия кнопки меню
+    }
 }
