@@ -33,7 +33,7 @@ class WeatherViewController: UIViewController {
     }
     
     private func setUpView() {
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .systemBlue
         
         view.addSubview(primaryView)
         NSLayoutConstraint.activate([
